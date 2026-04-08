@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Transaction</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="transaction.css">
 </head>
 <body>
     <div class="mobile-container">
@@ -23,50 +23,27 @@
             <label>Amount</label>
             <input type="text" placeholder="0.00" class="input-field">
         </div>
-
-        <div class="form-group">
+   <div class="form-group">
             <label>Category</label>
             <div class="select-wrapper">
                 <select class="input-field">
                     <option value="" disabled selected>Select a category</option>
+                    <option value="food">food</option>
+                    <option value="transport">transport</option>
+                    <option value="closes">closes</option>
+                    <option value="traveling">traveling</option>
                 </select>
             </div>
         </div>
-
         <div class="form-group">
             <label>Date</label>
-            <input type="text" value="8 апр. 2026 г." class="input-field">
+            <input type="date" class="input-field">
         </div>
-
         <div class="form-group">
-            <label>Description (Optional)</label>
+            <label>Description</label>
             <textarea placeholder="Add a note..." class="input-field textarea"></textarea>
         </div>
         <button class="add-expense-btn">Add Expense</button>
-        <nav class="bottom-nav">
-            <div class="nav-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-                <span>Dashboard</span>
-            </div>
-            <div class="nav-item active">
-                <div class="active-bg">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
-                    <span>Add</span>
-                </div>
-            </div>
-            <div class="nav-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
-                <span>Transactions</span>
-            </div>
-            <div class="nav-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-                <span>Budgets</span>
-            </div>
-            <div class="nav-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                <span>Analytics</span>
-            </div>
-        </nav>
     </div>
 </body>
 </html>

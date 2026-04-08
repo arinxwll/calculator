@@ -1,3 +1,8 @@
+.dashboard-page {
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
+}
 .header-info {
     display: flex;
     justify-content: space-between;
