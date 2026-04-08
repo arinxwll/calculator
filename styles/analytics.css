@@ -1,0 +1,60 @@
+.analytics-section {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .stat-card {
+    flex: 1; 
+    background: #ffffff;
+    border: 1px solid #eef0f2;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02); 
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .icon-box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .blue-bg {
+    background-color: #f0f7ff;
+  }
+  
+  .percentage {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 500;
+  }
+  
+  .percentage.green {
+    color: #10b981;
+  }
+  
+  .card-body .label {
+    color: #64748b;
+    font-size: 14px;
+    margin: 0 0 5px 0;
+  }
+  
+  .card-body .value {
+    color: #1e293b;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  
