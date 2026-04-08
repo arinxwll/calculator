@@ -95,3 +95,104 @@
 .img{
 width:"16";
 height:"16"}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #64748b;
+  font-weight: 500;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+.nav-item.active {
+  color: #1e293b;
+  border-bottom: 2px solid #2563eb;
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  background: #2563eb;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.analytics-container {
+  padding: 30px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stats-row {
+  display: flex;
+  gap: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #eef0f2;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #f0f7ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.percentage {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.percentage.green {
+  color: #10b981;
+}
+
+.label {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0;
+}
+
+.value {
+  font-size: 22px;
+  color: #1e293b;
+  margin: 5px 0 0 0;
+  font-weight: 700;
+}
