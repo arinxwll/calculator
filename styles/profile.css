@@ -33,3 +33,48 @@
     font-weight: 600;
     color: #333;
 }
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.action-btn {
+    flex: 1;
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.action-btn:active {
+    transform: scale(0.98);
+}
+
+.btn-icon {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.btn-income {
+    background-color: #dcfce7; 
+    color: #15803d;
+}
+
+.btn-expense {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}

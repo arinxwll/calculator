@@ -1,3 +1,8 @@
+.analytics-container {
+  padding: 30px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .analytics-section {
     display: flex;
     gap: 20px;
@@ -40,7 +45,7 @@
     font-weight: 500;
   }
   
-  .percentage.green {
+  .green {
     color: #10b981;
   }
   
