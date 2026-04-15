@@ -1,0 +1,76 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.tasks-page {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+h1 { font-size: 24px; font-weight: 700; }
+
+.add-task-btn {
+    background-color: #1e293b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.search-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.search-bar {
+    flex: 1;
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+}
+.search-icon { 
+    margin-right: 10px; 
+    color: #888;
+ }
+.search-bar input { 
+    border: none;
+    outline: none;
+    width: 100%; 
+    font-size: 15px;
+ }
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.task-item {
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.task-item input {
+     margin-right: 10px; 
+    }
+.task-name {
+     flex: 1;
+     font-family: Arial, Helvetica, sans-serif;
+    }
