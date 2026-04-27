@@ -3,79 +3,71 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tasks</title>
+        <title>Tasks Page</title>
         <link rel="stylesheet" href="styles/tasks.css">
     </head>
-    <body>
-        <div class="tasks-page">
-            <div class="header-section">
-                <h1>Tasks</h1>
-                <button class="add-task-btn">+ Add Task</button>
-            </div>
-            <div class="search-section">
-                <div class="search-bar">
-                    <span class="search-icon">🔍</span>
+        <div class="tasks-container">
+            <header class="tasks-header">
+                <h1 class="title">Tasks</h1>
+                <button class="add-btn">+ Add Task</button>
+            </header>
+            <div class="search-wrapper">
+                <div class="search-input-box">
+                    <span class="icon-search">🔍</span>
                     <input type="text" placeholder="Search tasks...">
                 </div>
+                <button class="filter-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                </button>
             </div>
-            <div class="tab">
-                <button class="tablinks" onclick="openCity(event, 'All')">All</button>
-                <button class="tablinks" onclick="openCity(event, 'Pending')">Pending</button>
-                <button class="tablinks" onclick="openCity(event, 'Completed')">Completed</button>
-              </div>
-              <div id="London" class="tabcontent">
-                <h3>All</h3>
-                <p><div class=""></div></p>
-              </div>
-              
-              <div id="Pending" class="tabcontent">
-                <h3>Pending</h3>
-                <p>.</p>
-              </div>
-              
-              <div id="Completed" class="tabcontent">
-                <h3>Completed</h3>
-                <p>.</p>
-              </div>
-            <div class="task-list">
-                <div class="task-item">
-                    <input type="checkbox">
-                    <span class="task-name">Погасить кредит</span>
+            <div class="stats-row">
+                <div class="stat-card">
+                    <span class="number completed">0</span>
+                    <span class="label">All</span>
                 </div>
-                <div class="task-item">
-                    <input type="checkbox">
-                    <span class="task-name">Отложить деньги</span>
+                <div class="stat-card">
+                    <span class="number pending">0</span>
+                    <span class="label">Pending</span>
                 </div>
-                <div class="task-item">
-                    <input type="checkbox">
-                    <span class="task-name">Спланирoвать расходы на следующую неделю</span>
-                </div>
-                <div class="task-item">
-                    <input type="checkbox">
-                    <span class="task-name">Обновить инвестиционный портфель</span>
-                </div>
-                <div class="task-item">
-                    <input type="checkbox">
-                    <span class="task-name">Отправлять отчеты о расходах</span>
+                <div class="stat-card">
+                    <span class="number overdue">0</span>
+                    <span class="label">Completed</span>
                 </div>
             </div>
         </div>
-        <script>
-            function openCity(evt, cityName) {
-              var i, tabcontent, tablinks;
-              tabcontent = document.getElementsByClassName("tabcontent");
-              for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-              }
-              tablinks = document.getElementsByClassName("tablinks");
-              for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-              }
-              document.getElementById(cityName).style.display = "block";
-              evt.currentTarget.className += " active";
-            }
-            
-            document.getElementById("defaultOpen").click();
-            </script>
-            </body>
+        <title>Tasks</title>
+        <link rel="stylesheet" href="styles/tasks.css">
+        <div class="task-list">
+            <div class="task-item">
+                <input type="checkbox">
+                <span class="task-name">Погасить кредит</span>
+            </div>
+            <div class="task-item">
+                <input type="checkbox">
+                <span class="task-name">Отложить деньги</span>
+            </div>
+            <div class="task-item">
+                <input type="checkbox">
+                <span class="task-name">Спланирoвать расходы на следующую неделю</span>
+            </div>
+            <div class="task-item">
+                <input type="checkbox">
+                <span class="task-name">Обновить инвестиционный портфель</span>
+            </div>
+            <div class="task-item">
+                <input type="checkbox">
+                <span class="task-name">Отправлять отчеты о расходах</span>
+            </div>
+        </div>
+        <div class="tabs-navigation-wrapper">
+          <div class="tabs-navigation">
+              <button class="tab active" data-filter="pending" id="pendingTab">Pending (0)</button>
+              <button class="tab" data-filter="completed" id="completedTab">Completed (0)</button>
+              <button class="tab" data-filter="all" id="allTab">All (0)</button>
+          </div>
+      </div>
+      <h2 class="current-view-title" id="currentViewTitle"></h2>
+      <div class="task-list">
+      </div>
+  <script src="scripts/tasks.js"></script>
         </html>
