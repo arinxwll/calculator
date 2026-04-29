@@ -6,15 +6,16 @@
     <title>Add Transaction</title>
     <link rel="stylesheet" href="styles/transaction.css">
 </head>
+
 <body>
     <div class="mobile-container">
         <h2 class="form-title">Add Transaction</h2>
         <div class="transaction-toggle">
-            <button class="toggle-btn active">
+            <button class="toggle-btn active" id="expense-btn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                 Expense
             </button>
-            <button class="toggle-btn">
+            <button class="toggle-btn" id="income-btn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                 Income
             </button>
@@ -43,7 +44,8 @@
             <label>Description</label>
             <textarea placeholder="Add a note..." class="input-field textarea"></textarea>
         </div>
-        <button class="add-expense-btn">Add Expense</button>
+        <button class="add-expense-btn" id="submit-btn">Add Expense</button>
     </div>
+    <script src="scripts/transactions.js"></script>
 </body>
 </html>

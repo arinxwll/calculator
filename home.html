@@ -1,18 +1,52 @@
 <!doctype html>
 <html lang="en">
-    <link rel="stylesheet" href="styles/styles.css">
-  <body class="container">
-     <header class="navbar">
-        <div class="container">
-          <div class="items">
-            <a href="transactions.html" class="item">Transactions</a>
-            <a href="analytics.html" class="item">Analytics</a>
-            <a href="tasks.html" class="item">Tasks</a>
-            <a href="profile.html" class="item">Profile</a>
-            <a href="home.html" class="item active">Home</a>
-            </div>
-          </div>
-        </header>
-  </body>
-</html>
-  
+    <link rel="stylesheet" href="styles/home.css">
+    <header class="navbar">
+            <div class="dashboard-page">
+                <div class="header-info">
+                     <div class="information">
+                         <div class="user-avatar">A</div>
+                             <span class="user-name">Arina Sharabura</span>
+                         </div>
+                         </div>
+                     </div>
+                    </header>
+                    <div class="balance-card">
+                        <div class="balance-top">
+                            <span class="label">Current Balance</span>
+                            <div class="trend">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                                +12.5%
+                            </div>
+                        </div>
+                        <div class="balance-amount">
+                            $2 847,5
+                            <button class="edit-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+                            </button>
+                        </div>
+                        <div class="balance-details">
+                      <div class="detail-item">
+                        <span class="label">This Month Income</span>
+                        <span class="value">$4 200</span>
+                     </div>
+                <div class="detail-item">
+                <span class="label">This Month Expenses</span>
+                <span class="value">$1 352,5</span>
+                     </div>
+                 </div>
+                    </div>
+                     <section class="quick-actions">
+                        <h3 class="section-title">Quick Actions</h3>
+                        <div class="action-buttons">
+                            <button class="action-btn btn-income">
+                                <span class="btn-icon">+</span>
+                                Add Income
+                            </button>
+                            <button class="action-btn btn-expense">
+                                <span class="btn-icon">-</span>
+                                Add Expense
+                            </button>
+                        </div>
+                    </section>
+            </html>
