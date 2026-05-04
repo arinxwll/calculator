@@ -100,14 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
 const searchInput = document.getElementById('task-search');
 
 searchInput.addEventListener('input', function() {
-    const filter = searchInput.value.toLowerCase(); // То, что мы ввели, в нижнем регистре
-    const tasks = document.querySelectorAll('.task-item'); // Берем все блоки задач
+    const filter = searchInput.value.toLowerCase(); 
+    const tasks = document.querySelectorAll('.task-item'); 
 
     tasks.forEach(task => {
-        // Находим текст внутри задачи (в спане с классом task-name)
+       
         const taskName = task.querySelector('.task-name').textContent.toLowerCase();
 
-        // Если текст задачи содержит то, что мы ввели в поиске
         if (taskName.includes(filter)) {
             task.style.display = '';
         } else {
