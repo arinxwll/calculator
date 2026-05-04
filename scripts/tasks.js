@@ -78,39 +78,4 @@ function handleCheckboxChange(event) {
     updateStats(); 
 }
 
-
-function handleTabClick(event) {
-    tabs.forEach(tab => tab.classList.remove('active')); 
-    event.target.classList.add('active'); 
-    currentFilter = event.target.dataset.filter;
-    renderTasks(); 
-    updateStats(); 
-}
-
-
-document.addEventListener('DOMContentLoaded', () => {
  
-    tabs.forEach(tab => {
-        tab.addEventListener('click', handleTabClick);
-    });
-
-    renderTasks();
-    updateStats();
-});
-const searchInput = document.getElementById('task-search');
-
-searchInput.addEventListener('input', function() {
-    const filter = searchInput.value.toLowerCase(); 
-    const tasks = document.querySelectorAll('.task-item'); 
-
-    tasks.forEach(task => {
-       
-        const taskName = task.querySelector('.task-name').textContent.toLowerCase();
-
-        if (taskName.includes(filter)) {
-            task.style.display = '';
-        } else {
-            task.style.display = 'none'; 
-        }
-    });
-});

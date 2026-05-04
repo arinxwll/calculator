@@ -40,7 +40,50 @@
               </div>
             </div>
           </div>
+        </main>
+        <script src="https://www.google.com/jsapi"></script>
+        <script>
+         google.load("visualization", "1", {packages:["corechart"]});
+         google.setOnLoadCallback(drawChart);
+         function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+          ['expense', 'categories'],
+           ['food',     53.09],
+           ['closes', 20.95],
+           ['traveling',    10.93],
+           ['transport', 15.03]
+          ]);
+          var options = {
+           title: 'Expense categories',
+           is3D: true,
+           pieResidueSliceLabel: 'other'
+          };
+          var chart = new google.visualization.PieChart(document.getElementById('expense'));
+           chart.draw(data, options);
+         }
+        </script>
+        <div id="expense" style="width: 500px; height: 400px;"></div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <body>
+          <div style="width: 50%; margin: auto;">
+              <canvas id="myChart"></canvas>
+          </div>
           
-          
-    </main>
-</html>
+          <script>
+              const ctx = document.getElementById('myChart').getContext('2d');
+              const myChart = new Chart(ctx, {
+                  type: 'bar',
+                  data: {
+                      labels: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+                      datasets: [{
+                          label: 'Expenses',
+                          data: [298, 720, 512, 811, 678, 446, 398, 587, 904, 788, 603, 720],
+                          backgroundColor: ['rgba(3, 252, 152)'],
+                          borderColor: ['rgba(3, 198, 252)'],
+                          borderWidth: 1
+                      }]
+                  }
+              });
+          </script>
+       </body>
+      </html>
