@@ -77,5 +77,22 @@ function handleCheckboxChange(event) {
     renderTasks(); 
     updateStats(); 
 }
+function handleTabClick(event) {
+    tabs.forEach(tab => tab.classList.remove('active')); 
+    event.target.classList.add('active');
+    currentFilter = event.target.dataset.filter;
+    renderTasks();
+    updateStats(); 
+}
 
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', handleTabClick);
+    });
+
+    renderTasks();
+    updateStats();
+});
  
