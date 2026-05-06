@@ -140,3 +140,106 @@
     background-color: #fee2e2;
     color: #b91c1c;
 }
+
+.transactions-history {
+    width: 100%;
+    max-width: 700px;
+    background: transparent;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.view-all-link {
+    text-decoration: none;
+    color: #4a90e2;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.transaction-list {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 1px solid #e8e4e1; 
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+.avatar-red { background-color: #e57373; }
+.avatar-green { background-color: #81c784; } 
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.item-category {
+    font-size: 13px;
+    color: #777;
+}
+
+.item-amount-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+}
+
+.amount-value {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.amount-expense { color: #e57373; } 
+.amount-income { color: #5a6e5f; }
+
+.amount-date {
+    font-size: 13px;
+    color: #777;
+}
