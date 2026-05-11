@@ -6,6 +6,7 @@ let tasks = [
     { id: 5, text: 'Отправлять отчеты о расходах', isCompleted: false, dueDate: '2026-04-25' } 
 ];
 const taskListEl = document.querySelector('.task-list');
+const addTaskForm = document.getElementById('myForm');
 const tabs = document.querySelectorAll('.tabs-navigation .tab');
 const completedCountEl = document.getElementById('completedCount');
 const pendingCountEl = document.getElementById('pendingCount');

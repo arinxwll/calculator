@@ -36,16 +36,16 @@
                     </form>
                   </div>
             </div>
-            <div class="stats-row">
+            <div class="stats-row" id="allTasksStat">
                 <div class="stat-card">
                     <span class="number completed">5</span>
                     <span class="label">All</span>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card" id="pendingTasksStat">
                     <span class="number pending">2</span>
                     <span class="label">Pending</span>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card" id="completedTasksStat">
                     <span class="number overdue">3</span>
                     <span class="label">Completed</span>
                 </div>
@@ -53,28 +53,6 @@
         </div>
         <title>Tasks</title>
         <link rel="stylesheet" href="styles/tasks.css">
-        <div class="task-list">
-            <div class="task-item">
-                <input type="checkbox">
-                <span class="task-name">Погасить кредит</span>
-            </div>
-            <div class="task-item">
-                <input type="checkbox">
-                <span class="task-name">Отложить деньги</span>
-            </div>
-            <div class="task-item">
-                <input type="checkbox">
-                <span class="task-name">Спланирoвать расходы на следующую неделю</span>
-            </div>
-            <div class="task-item">
-                <input type="checkbox">
-                <span class="task-name">Обновить инвестиционный портфель</span>
-            </div>
-            <div class="task-item">
-                <input type="checkbox">
-                <span class="task-name">Отправлять отчеты о расходах</span>
-            </div>
-        </div>
         <div class="tabs-navigation-wrapper">
           <div class="tabs-navigation">
               <button class="tab active" data-filter="pending" id="pendingTab">Pending</button>

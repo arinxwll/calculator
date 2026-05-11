@@ -27,20 +27,20 @@
  
             <div class="profile-main-card">
                 <div class="user-info-section">
-                    <div class="avatar-circle">AS</div>
+                    <div class="avatar-circle" id="profileAvatar">AS</div>
                     <div class="user-details">
-                        <h2 class="user-name">Arina Sharabura</h2>
-                        <p class="user-email">arina.200011@email.com</p>
-                        <p class="member-date">Member since May 2025</p>
+                        <div class="user-name" id="profileName">Arina Sharabura</div>
+                        <div class="user-email"id="profileEmail">arina.200011@email.com</div>
+                        <div class="member-date"id="memberSince">Member since May 2025</div>
                     </div>
                 </div>
-                <button class="edit-btn">Edit</button>
+                <button class="edit-btn"onclick="openEditProfileModal()">Edit</button>
             </div>
   
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-icon icon-green">$</div>
-                    <div class="stat-value" id="currentBalanceValue">$2,000</div> 
+                    <div class="stat-value" id="CurrentBalance">$0,00</div> 
                     <div class="stat-label">Current Balance</div>
                 </div>
                 <div class="stat-card">
@@ -52,7 +52,7 @@
                             <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
                         </svg>
                     </div>
-                    <div class="stat-value" id="transactionsCount">50</div> 
+                    <div class="stat-value" id="TotalTransactions">0</div> 
                     <div class="stat-label">Transactions</div>
                 </div>
                 <div class="stat-card">
@@ -63,7 +63,7 @@
                             <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
                         </svg>
                     </div>
-                    <div class="stat-value" id="completedTasksCount">10</div>
+                    <div class="stat-value" id="CompletedTasks">10</div>
                     <div class="stat-label">Completed Tasks</div>
                 </div>
             </div>
@@ -90,6 +90,7 @@
             </div>
         </div>
         <script src="scripts/profile.js"></script>
+    
     </body>
     </html>
 
