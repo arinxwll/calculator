@@ -40,27 +40,56 @@
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-icon icon-green">$</div>
-                    <div class="stat-value">$2,000</div>
+                    <div class="stat-value" id="currentBalanceValue">$2,000</div> 
                     <div class="stat-label">Current Balance</div>
                 </div>
-    
                 <div class="stat-card">
                     <div class="stat-icon icon-blue">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat">
+                            <polyline points="17 1 21 5 17 9"></polyline>
+                            <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                            <polyline points="7 23 3 19 7 15"></polyline>
+                            <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                        </svg>
                     </div>
-                    <div class="stat-value">50</div>
+                    <div class="stat-value" id="transactionsCount">50</div> 
                     <div class="stat-label">Transactions</div>
                 </div>
-    
                 <div class="stat-card">
                     <div class="stat-icon icon-purple">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                   
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square">
+                            <polyline points="9 11 12 14 22 4"></polyline>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                        </svg>
                     </div>
-                    <div class="stat-value">10</div>
+                    <div class="stat-value" id="completedTasksCount">10</div>
                     <div class="stat-label">Completed Tasks</div>
                 </div>
             </div>
         </div>
+        <div class="modal-overlay" id="editProfileModal">
+            <div class="modal-content">
+                <h3>Edit Profile</h3>
+                <div class="form-group">
+                    <label for="editAvatarInput">Avatar (initials)</label>
+                    <input type="text" id="editAvatarInput" placeholder="e.g., AS">
+                </div>
+                <div class="form-group">
+                    <label for="editNameInput">Name</label>
+                    <input type="text" id="editNameInput" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="editEmailInput">Email</label>
+                    <input type="email" id="editEmailInput" placeholder="your.email@example.com">
+                </div>
+                <div class="modal-actions">
+                    <button class="btn-cancel" onclick="closeEditProfileModal()">Cancel</button>
+                    <button class="btn-add" onclick="saveProfileChanges()">Save</button>
+                </div>
+            </div>
+        </div>
+        <script src="scripts/profile.js"></script>
     </body>
     </html>
 
