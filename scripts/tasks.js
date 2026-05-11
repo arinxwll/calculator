@@ -54,11 +54,10 @@ function renderTasks() {
         } else if (new Date(task.dueDate) <= now) {
             taskItem.classList.add('overdue-task');
         }
-
         taskItem.innerHTML = `
-            <input type="checkbox" data-id="${task.id}" ${task.isCompleted ? 'checked' : ''}>
-            <span>${task.text}</span>
-        `;
+        <input type="checkbox" data-id="${task.id}" ${task.isCompleted ? 'checked' : ''}>
+        <span class="task-name">${task.text}</span> 
+    `;
         taskListEl.appendChild(taskItem);
     });
 
@@ -95,4 +94,86 @@ document.addEventListener('DOMContentLoaded', () => {
     renderTasks();
     updateStats();
 });
+
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+  
+  function addNewTaskFromPopup() {
+      const textInput = document.getElementById("taskTextInput");
+      const dateInput = document.getElementById("taskDateInput");
+      
+      const text = textInput.value.trim();
+      const date = dateInput.value;
+  
+      if (text === "") {
+          alert("Please enter a task description");
+          return;
+      }
+  
+      const newTask = {
+          id: Date.now(),
+          text: text,
+          isCompleted: false,
+          dueDate: date || null
+      };
+  
+      tasks.push(newTask);
  
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+  
+      textInput.value = "";
+      dateInput.value = "";
+      closeForm();
+  
+      renderTasks();
+      updateStats();
+  }
+  const searchInput = document.querySelector('#task-search');
+
+searchInput.addEventListener('keyup', () => {
+  
+    let filter = searchInput.value.toLowerCase();
+ 
+    let tasks = document.querySelectorAll('.task-item');
+
+    tasks.forEach(task => {
+   
+        let taskText = task.querySelector('.task-name').textContent.toLowerCase();
+
+        if (taskText.includes(filter)) {
+    
+            task.classList.remove('is-hidden');
+        } else {
+        
+            task.classList.add('is-hidden');
+        }
+    });
+});
+
+let isSortedAscending = true; 
+
+function sortTasksAlphabetically() {
+    tasks.sort((a, b) => {
+        const textA = a.text.toLowerCase();
+        const textB = b.text.toLowerCase();
+
+        if (isSortedAscending) {
+          
+            if (textA < textB) return -1;
+            if (textA > textB) return 1;
+        } else {
+        
+            if (textA > textB) return -1;
+            if (textA < textB) return 1;
+        }
+        return 0; 
+    });
+    isSortedAscending = !isSortedAscending;
+    renderTasks();
+}
+   
