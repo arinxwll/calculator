@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const editAvatarInput = document.getElementById('editAvatarInput');
     const editNameInput = document.getElementById('editNameInput');
     const editEmailInput = document.getElementById('editEmailInput');
+    const editPasswordInput = document.getElementById('editPasswordInput');
 
     const defaultUserProfile = {
         avatar: 'AS',
@@ -66,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const newAvatar = editAvatarInput.value.trim().toUpperCase().substring(0, 2); 
         const newName = editNameInput.value.trim();
         const newEmail = editEmailInput.value.trim();
+        const newPassword = editPasswordInput.value.trim();
 
         if (!newAvatar || !newName || !newEmail) {
             alert("Please fill in all fields.");
@@ -76,8 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
             avatar: newAvatar,
             name: newName,
             email: newEmail,
+            password: newPassword,
             memberSince: (JSON.parse(localStorage.getItem('userProfile')) || defaultUserProfile).memberSince
         };
+
+        
+
         localStorage.setItem('userProfile', JSON.stringify(updatedUserProfile));
         
         updateProfileDisplay(); 

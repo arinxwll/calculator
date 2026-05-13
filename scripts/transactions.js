@@ -76,3 +76,20 @@ function renderTransactions() {
 }
 
 document.addEventListener('DOMContentLoaded', renderTransactions);
+
+transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+
+
+function updateProfileTransactionCount() {
+
+const currentTransactions = JSON.parse(localStorage.getItem('transactions')) || [];
+const count = currentTransactions.length;
+
+localStorage.setItem('transactionCountCache', JSON.stringify(count));
+
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+renderTransactions();
+updateProfileTransactionCount(); 
+});
