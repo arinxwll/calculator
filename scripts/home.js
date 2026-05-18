@@ -32,13 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.editBalance = function() {
-    // Всплывающее окно браузера для ввода числа
+
     const newBalance = prompt("Enter your current balance:");
     
     if (newBalance !== null && !isNaN(newBalance) && newBalance.trim() !== "") {
-        // Сохраняем в localStorage
+   
         localStorage.setItem('totalBalance', parseFloat(newBalance));
-        // Обновляем на экране
+      
         displayBalance();
     } else if (newBalance !== null) {
         alert("Please enter a valid number");

@@ -129,8 +129,8 @@ function deleteTransaction(idToDelete) {
     const updatedTransactions = transactions.filter(t => t.id !== idToDelete);
     localStorage.setItem('transactions', JSON.stringify(updatedTransactions));
     renderTransactions();
-    if (typeof updateProfileTransactionCount === 'function') updateProfileTransactionCount();
-    if (typeof renderHomeStats === 'function') renderHomeStats();
+    // if (typeof updateProfileTransactionCount === 'function') updateProfileTransactionCount();
+    // if (typeof renderHomeStats === 'function') renderHomeStats();
 }
 if (transactionListEl) {
     transactionListEl.addEventListener('click', (event) => {
