@@ -11,6 +11,65 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.balance-card {
+    background: #1a1c1e;
+    color: white;
+    padding: 24px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.balance-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance-row {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+
+}
+.balance-amount {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+}
+
+.edit-btn {
+    background: #2d3034;
+    border: none;
+    border-radius: 8px;
+    padding: 6px;
+    cursor: pointer;
+    color: #9ba1a6;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.edit-btn:hover {
+    background: #3e4247;
+    color: white;
+}
+
+.balance-details {
+    margin-top: 15px;
+    border-top: 1px solid #2d3034;
+    padding-top: 15px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.detail-item .label { color: #9ba1a6; font-size: 14px; }
+.detail-item .value { font-weight: 600; }
 .information {
     display: flex;
     align-items: center;
@@ -34,7 +93,7 @@
     color: #333;
 }
 .balance-card {
-    background-color: #2d333b; /* Темный цвет как на фото */
+    background-color: #2d333b;
     border-radius: 16px;
     padding: 24px 30px;
     color: white;

@@ -27,3 +27,29 @@ document.addEventListener('DOMContentLoaded', () => {
     if (homeTotalTransactionsEl) homeTotalTransactionsEl.textContent = totalTransactions;
     if (homeCompletedTasksEl) homeCompletedTasksEl.textContent = completedTasks;
 });
+document.addEventListener('DOMContentLoaded', () => {
+    displayBalance();
+});
+
+window.editBalance = function() {
+    // Всплывающее окно браузера для ввода числа
+    const newBalance = prompt("Enter your current balance:");
+    
+    if (newBalance !== null && !isNaN(newBalance) && newBalance.trim() !== "") {
+        // Сохраняем в localStorage
+        localStorage.setItem('totalBalance', parseFloat(newBalance));
+        // Обновляем на экране
+        displayBalance();
+    } else if (newBalance !== null) {
+        alert("Please enter a valid number");
+    }
+}
+
+function displayBalance() {
+    const savedBalance = localStorage.getItem('totalBalance') || "0";
+    const balanceElement = document.getElementById('currentBalanceValue');
+    
+    if (balanceElement) {
+        balanceElement.textContent = `$${parseFloat(savedBalance).toFixed(2)}`;
+    }
+}

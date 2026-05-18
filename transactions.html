@@ -9,43 +9,60 @@
 
 <body>
     <div class="mobile-container">
-        <h2 class="form-title">Add Transaction</h2>
+        <h1 class="form-title">Add Transaction</h1>
         <div class="transaction-toggle">
-            <button class="toggle-btn active" id="expense-btn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+            <button id="tabExpense" class="toggle-btn active" onclick="switchType('expense')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus-circle">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                </svg>
                 Expense
             </button>
-            <button class="toggle-btn" id="income-btn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+            <button id="tabIncome" class="toggle-btn" onclick="switchType('income')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="16"></line>
+                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                </svg>
                 Income
             </button>
         </div>
+    
         <div class="form-group">
             <label>Amount</label>
-            <input type="text" placeholder="0.00" class="input-field">
+            <input type="number" placeholder="0.00" id="transactionAmountInput" class="input-field">
         </div>
-   <div class="form-group">
+    
+        <div class="form-group">
             <label>Category</label>
             <div class="select-wrapper">
-                <select class="input-field">
+                <select class="input-field" id="transactionCategoryInput">
                     <option value="" disabled selected>Select a category</option>
-                    <option value="food">food</option>
-                    <option value="transport">transport</option>
-                    <option value="closes">closes</option>
-                    <option value="traveling">traveling</option>
+                    <option value="food">Food</option>
+                    <option value="transport">Transport</option>
+                    <option value="clothes">Clothes</option>
+                    <option value="traveling">Traveling</option>
+                
                 </select>
             </div>
         </div>
+    
         <div class="form-group">
             <label>Date</label>
-            <input type="date" class="input-field">
+            <input type="date" id="transactionDateInput" class="input-field">
         </div>
+        
         <div class="form-group">
             <label>Description</label>
-            <textarea placeholder="Add a note..." class="input-field textarea"></textarea>
+            <textarea placeholder="Add a note..." id="transactionDescriptionInput" class="input-field textarea"></textarea> 
         </div>
-        <button class="add-expense-btn" id="submit-btn">Add Expense</button>
-    </div>
+    
+        <div class="transaction-actions">
+            <button id="mainActionBtn" class="btn-save btn-expense" onclick="executeTransaction()">
+                Add Expense
+            </button>
+        </div>
+    
     <script src="scripts/transactions.js"></script>
 </body>
 </html>
